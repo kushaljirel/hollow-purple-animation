@@ -1,0 +1,185 @@
+body,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* max-height: 90vh;
+    max-width: 90vw; */
+    background-color: #3a3a3a;
+
+}
+
+body.bgChange {
+    animation: backgroundChange 8.5s ease-in-out;
+    background-color: black;
+}
+
+/* body.afterBlast {
+    
+} */
+
+/* introduction text */
+.hollow-purple-text {
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* gojo's image */
+img.gojo {
+    height: 40%;
+    /* aspect-ratio: 16/9; */
+    object-fit: contain;
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+
+}
+
+/* lightning strike effect */
+img.lightning {
+    opacity: 0;
+    width: 500px;
+    position: absolute;
+    bottom: 25%;
+    left: 5%;
+    object-fit: contain;
+    z-index: 2;
+
+}
+
+img.lightningBlast {
+    animation: lightningStrike 1s ease-in-out;
+    opacity: 0;
+}
+
+/* hollow purple energy ball */
+img.purpleimg {
+    opacity: 0;
+    width: 500px;
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+    object-fit: contain;
+    z-index: 3;
+}
+
+img.purple {
+    opacity: 1;
+    animation: fire 2s ease-in-out;
+    transform: translateY(-350px);
+    /* transition: transform 2s ease-in-out; */
+}
+
+
+
+img.fireBall {
+    animation: scalePurple 5s ease-in-out;
+}
+
+
+/* animation on off button */
+.button {
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    z-index: 10;
+    text-align: center;
+    display: flex;
+}
+
+button {
+
+    margin-right: 30px;
+    height: 40px;
+    width: 90px;
+    border-radius: 10px;
+    border-width: 5px;
+    border: none;
+    color: white;
+}
+
+.blastOn {
+    background-color: #017501;
+}
+
+.blastOff {
+    background-color: #cc0000;
+}
+
+
+/* all the key frame animations  */
+
+@keyframes lightningStrike {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes scalePurple {
+    0% {
+        transform: scale(5%);
+    }
+
+    95% {
+        transform: scale(100%);
+    }
+
+}
+
+@keyframes backgroundChange {
+    0% {
+        background-color: #5f046b;
+    }
+
+    25% {
+        background-color: #f0f0f0;
+    }
+
+    50% {
+        background-color: #521952;
+    }
+
+    75% {
+        background-color: #eeeeee;
+    }
+
+    90% {
+        background-color: #242424;
+    }
+
+    100% {
+        background-color: black;
+    }
+}
+
+/* moving animation */
+@keyframes fire {
+    from {
+        transform: translate(0);
+    }
+
+    to {
+        transform: translate(60vw);
+    }
+}
